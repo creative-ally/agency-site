@@ -1,4 +1,4 @@
-import NotFound from '@/components/Sharedd/NotFound';
+import NotFound from '@/components/Shared/NotFound';
 import Head from 'next/head';
 import React from 'react';
 
