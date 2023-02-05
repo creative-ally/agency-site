@@ -1,5 +1,5 @@
-import Footer from '@/components/shared/footer';
-import Header from '@/components/shared/header';
+import Footer from '@/components/Shared/Footer';
+import Header from '@/components/Shared/Header';
 import { Suspense } from 'react';
 import '../styles/globals.css';
 

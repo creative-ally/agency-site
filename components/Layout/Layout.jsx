@@ -1,8 +1,8 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import Footer from '../shared/footer';
-import Header from '../shared/header';
+import Footer from '../Shared/Footer';
+import Header from '../Shared/Header';
 
 const MainLayout = ({ children }) => {
   return (
