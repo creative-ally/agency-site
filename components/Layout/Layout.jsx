@@ -6,7 +6,7 @@ import Header from '../shared/header';
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden bg-black text-white">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Header />
       <Suspense
         fallback={
