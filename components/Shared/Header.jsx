@@ -34,13 +34,13 @@ const Header = () => {
       variants={fromTopVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-3 relative`}
+      className={`${styles.xPaddings} py-4 relative`}
     >
       <div className="navbar">
         <div className="navbar-start">
-          <button className="btn btn-ghost normal-case text-xs sm:text-sm md:text-xl">
+          <button className="btn btn-ghost normal-case text-lg sm:text-sm md:text-xl">
             <Link href={'/'}>
-              <span className="text-primary font-bold">Agency</span>
+              <span className="text-primary font-extrabold">Agency</span>
             </Link>
           </button>
         </div>

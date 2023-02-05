@@ -13,7 +13,7 @@ const Footer = () => {
       variants={fromBottomVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} pt-5 mt-auto relative`}
+      className={`${styles.xPaddings} pt-6 mt-auto relative`}
     >
       <div className="footer footer-center p-4">
         <div>
