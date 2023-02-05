@@ -2,6 +2,7 @@ import Footer from '@/components/Shared/Footer';
 import Header from '@/components/Shared/Header';
 import { Suspense } from 'react';
 import '../styles/globals.css';
+import Loading from './loading';
 
 export default function RootLayout({ children }) {
   return (
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
         <Suspense
           fallback={
             <>
-              <p>loading....</p>
+              <Loading />
             </>
           }
         >
