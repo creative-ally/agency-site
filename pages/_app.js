@@ -1,13 +1,12 @@
-import Footer from '@/components/shared/footer'
-import Header from '@/components/shared/header'
-import '@/styles/globals.css'
+import MainLayout from '@/components/Layout/Layout';
+import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
     </>
-  )
+  );
 }
