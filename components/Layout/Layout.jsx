@@ -3,6 +3,7 @@
 import React, { Suspense } from 'react';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
+import LoadingSpinner from '../Shared/LoadingSpinner';
 
 const MainLayout = ({ children }) => {
   return (
@@ -11,7 +12,7 @@ const MainLayout = ({ children }) => {
       <Suspense
         fallback={
           <>
-            <p>loading....</p>
+            <LoadingSpinner />
           </>
         }
       >
