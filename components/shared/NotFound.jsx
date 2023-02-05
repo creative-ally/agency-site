@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import NotFoundImg from '../../assets/gifs/NotFound.gif';
+import NotFoundImg from '../../assets/gifs/notFound.gif';
 import { fromTopVariants } from '@/utils/motion';
 
 const NotFound = () => {
