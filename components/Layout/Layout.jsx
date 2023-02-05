@@ -1,9 +1,9 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import Footer from '../shared/Footer';
-import Header from '../shared/Header';
-import LoadingSpinner from '../shared/LoadingSpinner';
+import Footer from '../Sharedd/Footer';
+import Header from '../Sharedd/Header';
+import LoadingSpinner from '../Sharedd/LoadingSpinner';
 
 const MainLayout = ({ children }) => {
   return (
