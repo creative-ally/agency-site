@@ -12,13 +12,13 @@ const NotFound = () => {
       variants={fromTopVariants}
       initial="hidden"
       whileInView="show"
-      className="hero min-h-full"
+      className=""
     >
-      <div className="hero-content text-center">
+      <div className="text-center">
         <div className="max-w-md">
           <img src={NotFoundImg.src} alt="not found" />
           <h1 className="text-3xl font-bold py-4">Page is not found!</h1>
-          <button className="btn btn-primary font-bold cursor-pointer">
+          <button className=" font-bold cursor-pointer">
             <Link href={`/`} className="">
               Go to Home
             </Link>
