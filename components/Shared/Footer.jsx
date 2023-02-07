@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <div className="footer footer-center p-4">
         <div>
-          <p>
+          <p className='text-[#000] dark:text-[#fff]'>
             Copyright &copy; {year} - All right reserved by{' '}
             <span className="text-xs text-primary font-extrabold sm:text-sm md:text-xl">
               {' '}
