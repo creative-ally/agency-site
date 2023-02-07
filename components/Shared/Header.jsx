@@ -59,132 +59,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-// const Android12Switch = styled(Switch)(({ theme }) => ({
-//   padding: 8,
-//   '& .MuiSwitch-track': {
-//     borderRadius: 22 / 2,
-//     '&:before, &:after': {
-//       content: '""',
-//       position: 'absolute',
-//       top: '50%',
-//       transform: 'translateY(-50%)',
-//       width: 16,
-//       height: 16,
-//     },
-//     '&:before': {
-//       backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
-//         theme.palette.getContrastText(theme.palette.primary.main),
-//       )}" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>')`,
-//       left: 12,
-//     },
-//     '&:after': {
-//       backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"><path fill="${encodeURIComponent(
-//         theme.palette.getContrastText(theme.palette.primary.main),
-//       )}" d="M19,13H5V11H19V13Z" /></svg>')`,
-//       right: 12,
-//     },
-//   },
-//   '& .MuiSwitch-thumb': {
-//     boxShadow: 'none',
-//     width: 16,
-//     height: 16,
-//     margin: 2,
-//   },
-// }));
-
-// const IOSSwitch = styled((props) => (
-//   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-// ))(({ theme }) => ({
-//   width: 42,
-//   height: 26,
-//   padding: 0,
-//   '& .MuiSwitch-switchBase': {
-//     padding: 0,
-//     margin: 2,
-//     transitionDuration: '300ms',
-//     '&.Mui-checked': {
-//       transform: 'translateX(16px)',
-//       color: '#fff',
-//       '& + .MuiSwitch-track': {
-//         backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
-//         opacity: 1,
-//         border: 0,
-//       },
-//       '&.Mui-disabled + .MuiSwitch-track': {
-//         opacity: 0.5,
-//       },
-//     },
-//     '&.Mui-focusVisible .MuiSwitch-thumb': {
-//       color: '#33cf4d',
-//       border: '6px solid #fff',
-//     },
-//     '&.Mui-disabled .MuiSwitch-thumb': {
-//       color:
-//         theme.palette.mode === 'light'
-//           ? theme.palette.grey[100]
-//           : theme.palette.grey[600],
-//     },
-//     '&.Mui-disabled + .MuiSwitch-track': {
-//       opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
-//     },
-//   },
-//   '& .MuiSwitch-thumb': {
-//     boxSizing: 'border-box',
-//     width: 22,
-//     height: 22,
-//   },
-//   '& .MuiSwitch-track': {
-//     borderRadius: 26 / 2,
-//     backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
-//     opacity: 1,
-//     transition: theme.transitions.create(['background-color'], {
-//       duration: 500,
-//     }),
-//   },
-// }));
-
-// const AntSwitch = styled(Switch)(({ theme }) => ({
-//   width: 28,
-//   height: 16,
-//   padding: 0,
-//   display: 'flex',
-//   '&:active': {
-//     '& .MuiSwitch-thumb': {
-//       width: 15,
-//     },
-//     '& .MuiSwitch-switchBase.Mui-checked': {
-//       transform: 'translateX(9px)',
-//     },
-//   },
-//   '& .MuiSwitch-switchBase': {
-//     padding: 2,
-//     '&.Mui-checked': {
-//       transform: 'translateX(12px)',
-//       color: '#fff',
-//       '& + .MuiSwitch-track': {
-//         opacity: 1,
-//         backgroundColor: theme.palette.mode === 'dark' ? '#177ddc' : '#1890ff',
-//       },
-//     },
-//   },
-//   '& .MuiSwitch-thumb': {
-//     boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-//     width: 12,
-//     height: 12,
-//     borderRadius: 6,
-//     transition: theme.transitions.create(['width'], {
-//       duration: 200,
-//     }),
-//   },
-//   '& .MuiSwitch-track': {
-//     borderRadius: 16 / 2,
-//     opacity: 1,
-//     backgroundColor:
-//       theme.palette.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(0,0,0,.25)',
-//     boxSizing: 'border-box',
-//   },
-// }));
-
 const Header = ({theme, setTheme}) => {
 
 
@@ -215,76 +89,22 @@ const Header = ({theme, setTheme}) => {
       whileInView="show"
       className={`${styles.xPaddings} py-4 relative`}
     >
-      {/* <div className="navbar">
-        <div className="navbar-start">
-          <button className="btn btn-ghost normal-case text-lg sm:text-sm md:text-xl">
-            <Link href={'/'}>
-              <span className="text-primary font-extrabold">Agency</span>
-            </Link>
-          </button>
-        </div>
-        <div className="navbar-end">
-          <div className="dropdown dropdown-end">
-            <label tabIndex="0" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex="0"
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52"
-            >
-              {menuItems}
-            </ul>
-          </div>
-        </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">{menuItems}</ul>
-        </div>
-      </div> */}
-
-
-      <div className='flex justify-evenly'>
+      <div className='flex justify-between items-center py-4'>
         <div>
-          <h1 className='text-5xl font-bold '>Brand</h1>
+          <Link href='/' className='text-5xl font-bold text-primary dark:text-dark-base-100'>Brand</Link>
         </div>
         <div>
-          <ul className='md:flex items-center justify-center text-2xl text-[#000] dark:text-[#fff]'>
+          <ul className='md:flex items-center justify-center text-2xl text-primary dark:text-dark-base-100'>
             {menuItems}
           </ul>
         </div>
         <div>
-          <ul className='md:flex items-center justify-center text-2xl'>
+          <ul className='md:flex items-center justify-center text-2xl text-primary dark:text-dark-base-100'>
             <li className='md:px-5 py-2'>
               <FormGroup>
                 <FormControlLabel
-                  control={<MaterialUISwitch sx={{ m: 1 }} onClick={handleThemeSwitch} defaultChecked />}
-                // label="MUI switch"
+                  control={<MaterialUISwitch onClick={handleThemeSwitch} defaultChecked />}
                 />
-                {/* <FormControlLabel
-                  control={<Android12Switch defaultChecked />}
-                  label="Android 12"
-                /> */}
-                {/* <FormControlLabel
-                  control={<IOSSwitch sx={{ m: 1 }} defaultChecked />}
-                  label="iOS style"
-                /> */}
-                {/* <Stack direction="row" spacing={1} alignItems="center">
-                  <Typography>Off</Typography>
-                  <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
-                  <Typography>On</Typography>
-                </Stack> */}
               </FormGroup>
             </li>
             <li className='md:px-5 py-2'>

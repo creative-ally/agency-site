@@ -15,11 +15,11 @@ const Footer = () => {
       whileInView="show"
       className={`${styles.xPaddings} pt-6 mt-auto relative`}
     >
-      <div className="footer footer-center p-4">
-        <div>
-          <p className='text-[#000] dark:text-[#fff]'>
+      <div className="footer footer-center p-4 " >
+        <div className='min-h-screen'>
+          <p className='text-center text-neutral dark:text-dark-base-100'>
             Copyright &copy; {year} - All right reserved by{' '}
-            <span className="text-xs text-primary font-extrabold sm:text-sm md:text-xl">
+            <span className="text-xs text-primary dark:text-dark-primary font-extrabold sm:text-sm md:text-xl">
               {' '}
               Agency{' '}
             </span>
