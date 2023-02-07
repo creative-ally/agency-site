@@ -6,6 +6,7 @@ import '../styles/globals.css';
 import Loading from './loading';
 import { useState, useEffect } from "react";
 
+
 export default function RootLayout({ children }) {
   const [theme, setTheme] = useState(null);
   useEffect(() => {
