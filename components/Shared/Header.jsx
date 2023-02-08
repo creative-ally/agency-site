@@ -107,7 +107,7 @@ const Header = ({ theme, setTheme }) => {
 
       
       <div className='md:flex justify-between items-center py-4 relative'>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center container'>
           <Link href='/' className='text-5xl font-bold text-primary dark:text-dark-base-100'>Brand</Link>
           <div className='cursor-pointer md:hidden' onClick={() => setOpenMenu(!openMenu)}><AiOutlineMenu size={35} className='text-primary dark:text-dark-base-100' /> </div>
         </div>

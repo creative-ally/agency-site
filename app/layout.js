@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className='dark'>
       <head />
-      <body className="bg-base-100 dark:bg-dark-neutral px-5 md:px-10 lg:px-20">
+      <body className="bg-base-100 dark:bg-dark-neutral">
         <Header theme={theme} setTheme={setTheme}/>
         <Suspense
           fallback={
