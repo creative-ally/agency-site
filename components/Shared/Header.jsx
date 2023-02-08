@@ -17,7 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { AiOutlineMenu } from 'react-icons/ai'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
-  width: 62,
+  width: 61,
   height: 34,
   padding: 7,
   '& .MuiSwitch-switchBase': {
@@ -83,16 +83,16 @@ const Header = ({ theme, setTheme }) => {
 
   const menuItems = (
     <>
-      <li className='md:px-5 py-2'>
+      <li onClick={() => setOpenMenu(!openMenu)} className='md:px-2 lg:px-5 py-2'>
         <Link href={'/'}>Home</Link>
       </li>
-      <li className='md:px-5 py-2'>
+      <li onClick={() => setOpenMenu(!openMenu)} className='md:px-2 lg:px-5 py-2'>
         <Link href={'/about'}>About</Link>
       </li>
-      <li className='md:px-5 py-2'>
+      <li onClick={() => setOpenMenu(!openMenu)} className='md:px-2 lg:px-5 py-2'>
         <Link href={'/projects'}>Projects</Link>
       </li>
-      <li className='md:px-5 py-2'>
+      <li onClick={() => setOpenMenu(!openMenu)} className='md:px-2 lg:px-5 py-2'>
         <Link href={'/blogs'}>Blogs</Link>
       </li>
     </>
@@ -111,17 +111,17 @@ const Header = ({ theme, setTheme }) => {
           <Link href='/' className='text-5xl font-bold text-primary dark:text-dark-base-100'>Brand</Link>
           <div className='cursor-pointer md:hidden' onClick={() => setOpenMenu(!openMenu)}><AiOutlineMenu size={35} className='text-primary dark:text-dark-base-100' /> </div>
         </div>
-        <div className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${!openMenu ? 'top-[-300px]' : 'top-20'} absolute z-10 md:ml-64 bg-accent`}>
+        <div className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${!openMenu ? 'top-[-400px]' : 'top-20'} absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}>
           <div>
-            <ul className={`md:flex items-center justify-center text-lg md:text-2xl text-primary dark:text-dark-base-100 `}>
+            <ul className={`md:flex items-center justify-center text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100 `}>
               {menuItems}
             </ul>
           </div>
           <div>
-            <ul className='md:flex items-center justify-center md:flex-row-reverse text-lg md:text-2xl text-primary dark:text-dark-base-100'>
-              <li className='md:px-5 py-2 '>
+            <ul className='md:flex items-center justify-center md:flex-row-reverse text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100'>
+              <li className='md:px-2 lg:px-5 py-2 '>
                 {
-                  !user ? <Link href={'#'}>Login</Link> :
+                  !user ? <Link onClick={() => setOpenMenu(!openMenu)} href={'#'}>Login</Link> :
                     <div>
                       <Link
                         href='#'
@@ -151,7 +151,7 @@ const Header = ({ theme, setTheme }) => {
                     </div>
                 }
               </li>
-              <li className='md:px-5 py-2'>
+              <li className='md:px-2 lg:px-5 py-2'>
                 <FormGroup>
                   <FormControlLabel
                     control={<MaterialUISwitch onClick={handleThemeSwitch} defaultChecked />}
