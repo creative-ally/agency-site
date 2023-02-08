@@ -11,6 +11,9 @@ import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -59,11 +62,22 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const Header = ({theme, setTheme}) => {
+const Header = ({ theme, setTheme }) => {
 
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const user = ''
+
+  const [openProfile, setOpenProfile] = React.useState(null);
+  const open = Boolean(openProfile);
+  const handleClick = (event) => {
+    setOpenProfile(event.currentTarget);
+  };
+  const handleClose = () => {
+    setOpenProfile(null);
   };
 
   const menuItems = (
@@ -99,16 +113,45 @@ const Header = ({theme, setTheme}) => {
           </ul>
         </div>
         <div>
-          <ul className='md:flex items-center justify-center text-2xl text-primary dark:text-dark-base-100'>
+          <ul className='md:flex items-center justify-center md:flex-row-reverse text-2xl text-primary dark:text-dark-base-100'>
+            <li className='md:px-5 py-2 '>
+              {
+                !user ? <Link href={'#'}>Login</Link> :
+                  <div>
+                    <Link
+                      href='#'
+                      id="basic-button"
+                      aria-controls={open ? 'basic-menu' : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? 'true' : undefined}
+                      onClick={handleClick}
+                    >
+                      Dashboard
+                    </Link>
+                    <Menu
+                      id="basic-menu"
+                      anchorEl={openProfile}
+                      open={open}
+                      onClose={handleClose}
+                      MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                      }}
+                    >
+                      <div className='py-3 pl-3 pr-10'>
+                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                      </div>
+                    </Menu>
+                  </div>
+              }
+            </li>
             <li className='md:px-5 py-2'>
               <FormGroup>
                 <FormControlLabel
                   control={<MaterialUISwitch onClick={handleThemeSwitch} defaultChecked />}
                 />
               </FormGroup>
-            </li>
-            <li className='md:px-5 py-2'>
-              <Link href={'#'}>Login</Link>
             </li>
           </ul>
         </div>
