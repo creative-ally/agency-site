@@ -7,7 +7,7 @@ import LoadingSpinner from '../Shared/LoadingSpinner';
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden">
+    <div className="flex flex-col overflow-x-hidden">
       <Header />
       <Suspense
         fallback={
