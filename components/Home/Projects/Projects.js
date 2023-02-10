@@ -14,11 +14,11 @@ const Projects = () => {
         </div>
         <div className="flex flex-col gap-4">
           <div className="flex gap-5 flex-col md:flex-row md:h-[29rem]">
-            <div className="h-full w-full project-animate">
+            <div className="h-full w-full project-animate rounded-none">
               <img
                 src={"/images/projects/1.png"}
                 alt="project"
-                className="w-full h-full"
+                className="w-full h-full rounded-none"
               />
             </div>
             <div className="h-full w-full">
