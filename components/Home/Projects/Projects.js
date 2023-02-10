@@ -20,29 +20,55 @@ const Projects = () => {
                 alt="project"
                 className="w-full h-full rounded-none"
               />
+              <div className="absolute animate-after bottom-0 w-full text-[#fff] pl-10 pb-8">
+                <h2 className="uppercase text-4xl font-bold ">
+                  Mobile ui design
+                </h2>
+                <p className="text-md capitalize">Social media marketting</p>
+              </div>
             </div>
-            <div className="h-full w-full">
+            <div className="h-full w-full project-animate">
               <img
                 src={"/images/projects/2.png"}
                 alt="project"
                 className="w-full h-full"
-              />
+              />{" "}
+              <div className="absolute animate-after bottom-0 w-full text-[#fff] pl-10 pb-8">
+                <h2 className="uppercase text-4xl font-bold ">
+                  product screen design
+                </h2>
+                <p className="text-md capitalize">Social media marketting</p>
+              </div>
             </div>
           </div>
           <div className="flex gap-5 flex-col md:flex-row md:h-[29rem] w-full">
-            <div className="h-full md:w-[60%]">
+            <div className="h-full md:w-[60%] project-animate">
               <img
                 src={"/images/projects/3.png"}
                 alt="project"
                 className="w-full h-full"
-              />
+              />{" "}
+              <div className="absolute animate-after bottom-0 w-full text-[#fff] pl-10 pb-8">
+                <h2 className="uppercase text-4xl font-bold ">
+                  wordpress website
+                </h2>
+                <p className="text-md capitalize">Social media marketting</p>
+              </div>
             </div>
-            <div className="h-full md:w-[40%]">
+
+            <div className="h-full md:w-[40%] relative animate-last">
               <img
                 src={"/images/projects/4.png"}
                 alt="project"
                 className="w-full h-full"
               />
+              <div className="absolute z-50 flex justify-center items-center flex-col top-0 w-full h-full text-[#fff] pl-10 pb-8">
+                <p className="">17+</p>
+                <p className="capitalize text-xl">Photoshots</p>
+                <button className="uppercase border-2 border-[#fff] rounded-full px-3 py-4 font-bold text-xl mt-4">
+                  view all samples
+                </button>
+              </div>
             </div>
           </div>
         </div>
