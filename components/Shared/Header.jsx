@@ -102,16 +102,14 @@ const Header = ({ theme, setTheme }) => {
       variants={fromTopVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-4 relative`}
+      className={`${styles.xPaddings} px-5 md:px-10 lg:px-24 sticky top-0 z-10 bg-base-100 dark:bg-dark-neutral`}
     >
-
-      
       <div className='md:flex justify-between items-center py-4 relative'>
         <div className='flex justify-between items-center container'>
           <Link href='/' className='text-5xl font-bold text-primary dark:text-dark-base-100'>Brand</Link>
           <div className='cursor-pointer md:hidden' onClick={() => setOpenMenu(!openMenu)}><AiOutlineMenu size={35} className='text-primary dark:text-dark-base-100' /> </div>
         </div>
-        <div className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${!openMenu ? 'top-[-400px]' : 'top-20'} absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}>
+        <div className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${!openMenu ? 'top-[-400px]' : 'top-0'} absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}>
           <div>
             <ul className={`md:flex items-center justify-center text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100 `}>
               {menuItems}
