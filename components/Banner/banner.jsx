@@ -17,14 +17,14 @@ const Banner = () => {
           />
         </div>
         <div className="md:w-9/12">
-          <p className="text-lg md:text-xl lg:text-2xl uppercase font-semibold">
+          <p className="text-lg md:text-xl lg:text-2xl uppercase font-semibold text-base-100">
             Business Solution
           </p>
           <h2 className="text-3xl md:text-6xl lg:text-8xl uppercase font-semibold">
             We Are Digital <br />{" "}
             <span className="text-primary dark:text-dark-primary">Agency.</span>{" "}
           </h2>
-          <p className="text-sm md:text-base lg:text-lg py-3 md:py-6 lg:py-10">
+          <p className="text-sm md:text-base lg:text-lg py-3 md:py-6 lg:py-10 text-base-100">
             There are many variations of passages of Lorem Ipsum available, the{" "}
             <br /> majority have suffered alteration in some form by injected
             humour.
