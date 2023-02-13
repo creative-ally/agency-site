@@ -6,8 +6,9 @@ const SinglePage = () => {
     const router = useRouter()
     console.log(router)
     const data = router.query
+    console.log(data)
     return (
-        <section class="text-gray-600 body-font overflow-hidden">
+        <section class="text-gray-600 body-font overflow-hidden dark:text-dark-base-100">
             <div class="container px-5 py-24 mx-auto">
                 <div class="lg:w-4/5 mx-auto flex flex-col">
                     <Image alt="ecommerce" class="lg:w-full lg:h-auto h-64 object-cover object-center rounded" src={data.img} />
