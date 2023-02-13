@@ -8,7 +8,7 @@ import { Icon } from '@rsuite/icons';
 
 const Services = () => {
     return (
-        <div className='p-5 md:p-10 lg:p-20'>
+        <div className='p-5 md:p-10 lg:p-32'>
             <div>
                 <p className="text-lg md:text-xl lg:text-2xl uppercase font-semibold text-primary dark:text-dark-primary">Our Best Service</p>
                 <h3 className='text-2xl md:text-3xl lg:text-5xl uppercase font-semibold text-[#121212] dark:text-base-100 pt-3 lg:pt-5'>WHAT Services WE’RE <br /> </h3>
