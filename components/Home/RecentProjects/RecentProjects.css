@@ -1,9 +1,9 @@
 .project-animate {
-  visibility: visible;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
-.project-animate::after {
+.project-animate:hover::after {
   position: absolute;
   content: "text";
   width: 100%;
@@ -16,12 +16,9 @@
   transition: 0.5s;
   pointer-events: none;
   padding: 1rem;
-}
-.project-animate:hover {
   animation-name: fadeInUp;
-  animation-delay: 0.2s;
-  position: relative;
-  z-index: 1;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadeInUp {
   0% {
