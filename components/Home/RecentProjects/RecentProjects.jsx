@@ -1,8 +1,9 @@
-import Image from "next/image";
-import React from "react";
-import "./projects.css";
+'use client';
 
-const Projects = () => {
+import React from 'react';
+import './RecentProjects.css';
+
+const RecentProjects = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="mb-8 mt-14  bg-red-500 px-5 md:px-0">
@@ -16,14 +17,14 @@ const Projects = () => {
           <div className="flex gap-5 flex-col md:flex-row md:h-[29rem]">
             <div className="h-full w-full project-animate rounded-none">
               <img
-                src={"/images/projects/1.png"}
+                src={'/images/projects/1.png'}
                 alt="project"
                 className="w-full h-full rounded-none"
               />
             </div>
             <div className="h-full w-full">
               <img
-                src={"/images/projects/2.png"}
+                src={'/images/projects/2.png'}
                 alt="project"
                 className="w-full h-full"
               />
@@ -32,14 +33,14 @@ const Projects = () => {
           <div className="flex gap-5 flex-col md:flex-row md:h-[29rem] w-full">
             <div className="h-full md:w-[60%]">
               <img
-                src={"/images/projects/3.png"}
+                src={'/images/projects/3.png'}
                 alt="project"
                 className="w-full h-full"
               />
             </div>
             <div className="h-full md:w-[40%]">
               <img
-                src={"/images/projects/4.png"}
+                src={'/images/projects/4.png'}
                 alt="project"
                 className="w-full h-full"
               />
@@ -51,4 +52,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default RecentProjects;
