@@ -1,7 +1,7 @@
-import Image from "next/image";
-import React from "react";
-import Globalbtn from "../GlobalButton/globalbtn";
-import './banner.css'
+import Globalbtn from '@/components/Shared/globalbtn';
+import Image from 'next/image';
+import React from 'react';
+import './banner.css';
 
 const Banner = () => {
   return (
@@ -13,13 +13,15 @@ const Banner = () => {
               Business Solution
             </p>
             <h2 className="text-3xl md:text-6xl lg:text-8xl uppercase font-semibold">
-              We Are Digital <br />{" "}
-              <span className="text-primary dark:text-dark-primary">Agency.</span>{" "}
+              We Are Digital <br />{' '}
+              <span className="text-primary dark:text-dark-primary">
+                Agency.
+              </span>{' '}
             </h2>
             <p className="text-sm md:text-base lg:text-lg py-3 md:py-6 lg:py-10 text-base-100">
-              There are many variations of passages of Lorem Ipsum available, the{" "}
-              <br /> majority have suffered alteration in some form by injected
-              humour.
+              There are many variations of passages of Lorem Ipsum available,
+              the <br /> majority have suffered alteration in some form by
+              injected humour.
             </p>
             <Globalbtn>Discover More</Globalbtn>
           </div>
@@ -41,8 +43,7 @@ const Banner = () => {
               alt=""
             />
           </div>
-          <div className="md:w-9/12">
-          </div>
+          <div className="md:w-9/12"></div>
           <div className="w-1/12 md:w-2/12 overflow-x-hidden">
             <Image
               className="rightImage"
@@ -54,7 +55,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
