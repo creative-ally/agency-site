@@ -3,7 +3,7 @@
 import React from 'react';
 import Regi from '@/components/Auth/SignUp';
 
-const Registration = () => {
+const Page = () => {
   return (
     <>
       <Regi />
@@ -11,4 +11,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Page;
