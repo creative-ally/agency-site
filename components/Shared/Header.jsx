@@ -121,7 +121,7 @@ const Header = ({ theme, setTheme }) => {
             <ul className='md:flex items-center justify-center md:flex-row-reverse text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100'>
               <li className='md:px-2 lg:px-5 py-2 '>
                 {
-                  !user ? <Link onClick={() => setOpenMenu(!openMenu)} href={'#'}>Login</Link> :
+                  !user ? <Link onClick={() => setOpenMenu(!openMenu)} href="/login">Login</Link> :
                     <div>
                       <Link
                         href='#'
