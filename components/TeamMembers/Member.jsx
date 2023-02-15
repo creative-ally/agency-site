@@ -27,7 +27,7 @@ const Member = ({ member }) => {
             </Card>
             <div className='text-center mb-5 lg:mb-0'>
                 <h3 className='text-lg md:text-xl lg:text-2xl uppercase font-semibold text-black dark:text-base-100 pt-4 group-hover:text-primary dark:group-hover:text-dark-primary'>{member.name}</h3>
-                <p className='lg:lg uppercase font-semibold text-black dark:text-base-100 pt-1'>{member.designation}</p>
+                <p className='text-sm lg:text-lg uppercase font-semibold text-black dark:text-base-100 pt-1'>{member.designation}</p>
             </div>
         </div>
     );
