@@ -1,6 +1,10 @@
+'use client';
+
 import Globalbtn from '@/components/Shared/globalbtn';
 import Image from 'next/image';
 import React from 'react';
+import bgImage from '../../../assets/images/2.jpg'
+
 import './banner.css';
 
 const Banner = () => {

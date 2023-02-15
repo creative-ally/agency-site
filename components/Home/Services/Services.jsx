@@ -15,7 +15,7 @@ const Services = () => {
         <p className="text-lg md:text-xl lg:text-2xl uppercase font-semibold text-primary dark:text-dark-primary">
           Our Best Service
         </p>
-        <h3 className="text-2xl md:text-3xl lg:text-5xl uppercase font-semibold text-[#121212] dark:text-base-100 pt-3 lg:pt-5">
+        <h3 className="text-2xl md:text-3xl lg:text-5xl uppercase font-semibold text-black dark:text-base-100 pt-3 lg:pt-5">
           WHAT Services WE’RE <br />{' '}
         </h3>
         <h3 className="text-2xl md:text-3xl lg:text-5xl uppercase font-semibold text-primary dark:text-dark-primary pt-2 lg:pt-5">
