@@ -3,6 +3,7 @@
 import Globalbtn from '@/components/Shared/globalbtn';
 import Image from 'next/image';
 import React from 'react';
+import bgImage from '../../../assets/images/2.jpg'
 
 import './banner.css';
 
@@ -11,7 +12,7 @@ const Banner = () => {
     <div className="bgImage">
       <div className="">
         <div className="flex justify-between items-center py-10 md:py-16 lg:py-20 px-5 md:px-10 lg:px-32">
-          <div className="md:w-9/12">
+          <div className="">
             <p className="text-lg md:text-xl lg:text-2xl uppercase font-semibold text-base-100">
               Business Solution
             </p>
