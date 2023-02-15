@@ -114,7 +114,7 @@ const Header = ({ theme, setTheme }) => {
       variants={fromTopVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} px-5 md:px-10 lg:px-24 sticky top-0 z-10 bg-base-100 dark:bg-dark-neutral`}
+      className={`${styles.xPaddings} px-5 md:px-10 lg:px-24 sticky top-0 z-10 bg-base-100 dark:bg-dark-neutral lg:py-3`}
     >
       <div className="md:flex justify-between items-center py-4 relative">
         <div className="flex justify-between items-center container">
@@ -130,7 +130,7 @@ const Header = ({ theme, setTheme }) => {
           >
             <AiOutlineMenu
               size={35}
-              className="text-primary dark:text-dark-base-100"
+              className="text-primary dark:text-base-100"
             />{' '}
           </div>
         </div>
@@ -139,9 +139,9 @@ const Header = ({ theme, setTheme }) => {
             !openMenu ? 'top-[-400px]' : 'top-0'
           } absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}
         >
-          <div>
+          <div className=''>
             <ul
-              className={`md:flex items-center justify-center text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100 `}
+              className={`md:flex items-center justify-center text-lg md:text-xl lg:text-2xl text-primary dark:text-base-100`}
             >
               {menuItems}
             </ul>
