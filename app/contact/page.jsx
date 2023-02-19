@@ -54,13 +54,13 @@ const Contact = () => {
         });
     }
     return (
-        <div className="px-5 md:px-10 lg:px-32 ">
+        <div className="px-5 md:px-10 lg:px-32 pt-10">
             <h2 className="text-center text-2xl md:text-3xl lg:text-5xl uppercase font-semibold text-black dark:text-base-100 pt-3 lg:pt-5">Contact <span className=" text-primary dark:text-dark-primary pt-2 lg:pt-5">Us</span></h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                <div className='flex items-center py-5 md:py-8 lg:py-12'>
+                <div className='flex items-center py-5 md:py-8 lg:py-16'>
                     <div class="group w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 rounded-full bg-gradient-to-r from-secondary to-primary dark:from-dark-accent dark:to-dark-primary p-[2px] transition-all ease-in-out duration-500 mr-3 md:mr-4 lg:mr-5">
                         <div class="flex justify-center items-center h-full w-full rounded-full bg-base-100 dark:bg-dark-neutral group-hover:bg-gradient-to-r from-secondary to-primary dark:from-dark-accent dark:to-dark-primary">
-                            <FaPhoneAlt className='text-primary dark:text-dark-primary group-hover:text-base-100 dark:group-hover:text-base-100' size={30} />
+                            <FaPhoneAlt className='text-2xl md:text-4xl lg:text-5xl text-primary dark:text-dark-primary group-hover:text-base-100 dark:group-hover:text-base-100' />
                         </div>
                     </div>
                     <div>
@@ -72,7 +72,7 @@ const Contact = () => {
                 <div className='flex items-center'>
                     <div class="group w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 rounded-full bg-gradient-to-r from-secondary to-primary dark:from-dark-accent dark:to-dark-primary p-[2px] transition-all ease-in-out duration-500 mr-3 md:mr-4 lg:mr-5">
                         <div class="flex justify-center items-center h-full w-full rounded-full bg-base-100 dark:bg-dark-neutral group-hover:bg-gradient-to-r from-secondary to-primary dark:from-dark-accent dark:to-dark-primary">
-                            <FaEnvelope className='text-primary dark:text-dark-primary group-hover:text-base-100 dark:group-hover:text-base-100' size={30} />
+                            <FaEnvelope className='text-2xl md:text-4xl lg:text-5xl text-primary dark:text-dark-primary group-hover:text-base-100 dark:group-hover:text-base-100' />
                         </div>
                     </div>
                     <div>
@@ -84,7 +84,7 @@ const Contact = () => {
                 <div className='flex items-center'>
                     <div class="group w-16 h-16 md:h-24 md:w-24 lg:h-32 lg:w-32 rounded-full bg-gradient-to-r from-secondary to-primary dark:from-dark-accent dark:to-dark-primary p-[2px] transition-all ease-in-out duration-500 mr-3 md:mr-4 lg:mr-5">
                         <div class="flex justify-center items-center h-full w-full rounded-full bg-base-100 dark:bg-dark-neutral group-hover:bg-gradient-to-r from-secondary to-primary dark:from-dark-accent dark:to-dark-primary">
-                            <MdLocationOn className='text-primary dark:text-dark-primary group-hover:text-base-100 dark:group-hover:text-base-100' size={30} />
+                            <MdLocationOn className='text-2xl md:text-4xl lg:text-5xl text-primary dark:text-dark-primary group-hover:text-base-100 dark:group-hover:text-base-100' />
                         </div>
                     </div>
                     <div>
@@ -93,29 +93,29 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid lg:grid-cols-2 gap-5 py-5 md:py-8 lg:py-12'>
+            <div className='grid lg:grid-cols-2 gap-5 py-5 md:py-8 lg:py-16'>
                 <div>
                     <Card className='bg-slate-200 dark:bg-slate-700'>
                         <form onSubmit={handleSubmit(onSubmit)} className='text-neutral px-5 md:px-10 lg:px-16 py-5 md:py-8 lg:py-12'>
                             <div className='mb-2'>
                                 <label className='block text-black dark:text-base-100' htmlFor="Your name">Your name</label>
                                 <input {...register('name', { required: 'Name is required.' })} className='focus:outline-none bg-slate-300 dark:bg-dark-neutral text-black dark:text-base-100 pl-2 py-2 w-full' type="text" name="name" id="name" />
-                                {errors.name && <label className='text-sm text-error' htmlFor="">{errors.name?.message}</label>}
+                                {errors.name && <label className='text-sm text-rose-500' htmlFor="">{errors.name?.message}</label>}
                             </div>
                             <div className='mb-2'>
                                 <label className='block text-black dark:text-base-100' htmlFor="Your email">Your email</label>
                                 <input {...register('email', { required: 'Email is required.' })} className='focus:outline-none bg-slate-300 dark:bg-dark-neutral text-black dark:text-base-100 pl-2 py-2 w-full' type="email" name="email" id="name" />
-                                {errors.email && <label className='text-sm text-error' htmlFor="">{errors.email?.message}</label>}
+                                {errors.email && <label className='text-sm text-rose-500' htmlFor="">{errors.email?.message}</label>}
                             </div>
                             <div className='mb-2'>
                                 <label className='block text-black dark:text-base-100' htmlFor="Your subject">Your subject</label>
                                 <input {...register('subject', { required: 'Subject is required.' })} className='focus:outline-none bg-slate-300 dark:bg-dark-neutral text-black dark:text-base-100 pl-2 py-2 w-full' type="text" name="subject" id="name" />
-                                {errors.subject && <label className='text-sm text-error' htmlFor="">{errors.subject?.message}</label>}
+                                {errors.subject && <label className='text-sm text-rose-500' htmlFor="">{errors.subject?.message}</label>}
                             </div>
                             <div className='mb-2'>
                                 <label className='block text-black dark:text-base-100' htmlFor="Your topics">Your topics</label>
                                 <textarea {...register('message', { required: 'Message is required.' })} className='focus:outline-none bg-slate-300 dark:bg-dark-neutral text-black dark:text-base-100 pl-2 py-2 w-full' type="text" name="message" id="name" />
-                                {errors.message && <label className='text-sm text-error' htmlFor="">{errors.message?.message}</label>}
+                                {errors.message && <label className='text-sm text-rose-500' htmlFor="">{errors.message?.message}</label>}
                             </div>
                             <Globalbtn><input className='cursor-pointer' type="submit" value="Submit" /> </Globalbtn>
                             
