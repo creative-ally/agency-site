@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import '../styles/globals.css';
 import Loading from './loading';
 import { useState, useEffect } from "react";
+import { Toaster } from 'react-hot-toast';
 
 
 export default function RootLayout({ children }) {
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           {children}
         </Suspense>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
