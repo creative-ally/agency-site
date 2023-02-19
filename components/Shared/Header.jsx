@@ -107,6 +107,12 @@ const Header = ({ theme, setTheme }) => {
       >
         <Link href={'/blogs'}>Blogs</Link>
       </li>
+      <li
+        onClick={() => setOpenMenu(!openMenu)}
+        className="md:px-2 lg:px-5 py-2"
+      >
+        <Link href={'/contact'}>Contact</Link>
+      </li>
     </>
   );
   return (
