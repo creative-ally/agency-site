@@ -4,6 +4,7 @@ import { Card } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import contactImage from '../../assets/images/contact.png'
@@ -25,24 +26,24 @@ const Contact = () => {
                 toast.custom((t) => (
                     <div
                         className={`${t.visible ? 'animate-enter' : 'animate-leave'
-                            } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+                            } max-w-md w-full bg-slate-200 dark:bg-slate-700 shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
                     >
                         <div className="flex-1 w-0 p-4">
                             <div className="flex items-start">
                                 <div className="ml-3 flex-1">
-                                    <p className="text-sm font-medium text-gray-900">
+                                    <p className="text-sm font-medium text-black dark:text-base-100">
                                         Congarts! {data.name}.
                                     </p>
-                                    <p className="mt-1 text-sm text-gray-500">
+                                    <p className="mt-1 text-sm text-black dark:text-base-100">
                                        Your message send successfully.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div className="flex border-l border-gray-200">
+                        <div className="flex border-l border-primary dark:border-dark-primary">
                             <button
                                 onClick={() => toast.dismiss(t.id)}
-                                className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-primary dark:text-dark-primary focus:outline-none focus:ring-2 focus:ring-primary dark:ring-dark-primary"
                             >
                                 Close
                             </button>
