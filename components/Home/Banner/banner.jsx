@@ -3,7 +3,7 @@
 import Globalbtn from '@/components/Shared/globalbtn';
 import Image from 'next/image';
 import React from 'react';
-import bgImage from '../../../assets/images/2.jpg'
+// import bgImage from '../../../assets/images/2.jpg'
 
 import './banner.css';
 
@@ -37,7 +37,7 @@ const Banner = () => {
               alt="" />
           </div> */}
         </div>
-        <div className="flex justify-between items-start pb-5 mt-[-100px] md:mt-[-200px] lg:mt-[-450px]">
+        {/* <div className="flex justify-between items-start pb-5 mt-[-100px] md:mt-[-200px] lg:mt-[-450px]">
           <div className="w-1/12">
             <Image
               className="leftImage"
@@ -57,7 +57,7 @@ const Banner = () => {
               alt=""
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
