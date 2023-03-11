@@ -23,13 +23,13 @@ const Regi = () => {
          headers: {
              'content-type' : 'application/json'
          },
-         body: JSON.stringify(data),
-         callbackUrl: '/'
+         body: JSON.stringify(data)
+        //  callbackUrl: '/'
      })
      console.log(res)
      if(res.status === 200){
          alert('Data added successfully')
-         router.push(res.url)
+        //  router.push(res.url)
          reset()
      }
  };
@@ -41,19 +41,22 @@ const Regi = () => {
           margin="normal"
           required
           fullWidth
-          {...register("name", { required: "Email Address is required" })}
+          label="Type your name"
+          {...register("name", { required: "Name is required" })}
         />
         <TextField
           margin="normal"
           required
           fullWidth
+          label="Email Address"
           {...register("email", { required: "Email Address is required" })}
         />
         <TextField
           margin="normal"
           required
           fullWidth
-          {...register("password", { required: "Email Address is required" })}
+          label="Type password"
+          {...register("password", { required: "Password is required" })}
           type="password"
         />
         <TextField
