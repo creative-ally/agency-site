@@ -67,6 +67,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 const Header = ({ theme, setTheme }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const { data } = useSession();
+  const session = useSession();
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -81,7 +82,7 @@ const Header = ({ theme, setTheme }) => {
     setOpenProfile(null);
   };
 
-  console.log(data);
+  console.log(session);
   const menuItems = (
     <>
       <li
@@ -121,13 +122,13 @@ const Header = ({ theme, setTheme }) => {
       // variants={fromTopVariants}
       // initial="hidden"
       // whileInView="show"
-      className={`${styles.xPaddings} px-5 md:px-10 lg:px-24 sticky top-0 z-10 bg-base-100 dark:bg-dark-neutral lg:py-2`}
+      className={`${styles.xPaddings} px-5 md:px-10 lg:px-24 sticky top-0 z-10 bg-base-100 dark:bg-dark-neutral lg:pb-3`}
     >
-      <div className="md:flex justify-between items-center py-2 relative">
+      <div className="md:flex justify-between items-center pt-2 pb-0 relative">
         <div className="flex justify-between items-center container">
           <Link
             href="/"
-            className="text-5xl font-bold text-primary dark:text-dark-base-100"
+            className="text-5xl font-bold text-primary dark:text-dark-base-100 mt-3"
           >
             Brand
           </Link>
@@ -142,9 +143,7 @@ const Header = ({ theme, setTheme }) => {
           </div>
         </div>
         <div
-          className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${
-            !openMenu ? "top-[-400px]" : "top-0"
-          } absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}
+          className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${!openMenu ? "top-[-400px]" : "top-0"} absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}
         >
           <div className="">
             <ul
@@ -155,7 +154,7 @@ const Header = ({ theme, setTheme }) => {
           </div>
           <div>
             <ul className="md:flex items-center justify-center md:flex-row-reverse text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100">
-              <li className="md:px-2 lg:px-5 py-2 ">
+              <li className="md:px-2 lg:px-5 py-2">
                 {!data?.user ? (
                   <Link onClick={() => setOpenMenu(!openMenu)} href="/login">
                     Login

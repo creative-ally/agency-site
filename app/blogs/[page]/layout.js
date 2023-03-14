@@ -6,8 +6,6 @@ const singleblog = () => {
         <div>
             <SingleBlog/>
         </div>
-
-        
     );
 };
 
