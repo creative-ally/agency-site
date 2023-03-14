@@ -7,6 +7,8 @@ import Loading from "./loading";
 import { useState, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import { SessionProvider } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
 
 export default function RootLayout({ children }) {
   const [theme, setTheme] = useState(null);
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
   return (
     <html lang="en" className="dark">
       <head />

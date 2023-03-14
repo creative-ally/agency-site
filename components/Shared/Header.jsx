@@ -147,13 +147,13 @@ const Header = ({ theme, setTheme }) => {
         >
           <div className="">
             <ul
-              className={`md:flex items-center justify-center text-lg md:text-xl lg:text-2xl text-primary dark:text-base-100`}
+              className={`md:flex items-center justify-center text-base md:text-lg lg:text-xl text-primary dark:text-base-100`}
             >
               {menuItems}
             </ul>
           </div>
           <div>
-            <ul className="md:flex items-center justify-center md:flex-row-reverse text-lg md:text-xl lg:text-2xl text-primary dark:text-dark-base-100">
+            <ul className="md:flex items-center justify-center md:flex-row-reverse text-base md:text-lg lg:text-xl text-primary dark:text-dark-base-100">
               <li className="md:px-2 lg:px-5 py-2">
                 {!data?.user ? (
                   <Link onClick={() => setOpenMenu(!openMenu)} href="/login">
