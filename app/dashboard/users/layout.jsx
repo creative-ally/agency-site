@@ -32,7 +32,7 @@ function DashLayout({ window, children }) {
   };
 
   const drawer = (
-    <div>
+    <div className="bg-base-100 dark:bg-[#2A3950] h-screen">
       <Toolbar />
       <Divider />
       <List>
@@ -60,6 +60,7 @@ function DashLayout({ window, children }) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
+      className="bg-transparent"
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -83,7 +84,7 @@ function DashLayout({ window, children }) {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -101,6 +102,7 @@ function DashLayout({ window, children }) {
               boxSizing: "border-box",
               width: drawerWidth,
             },
+            
           }}
         >
           {drawer}
@@ -149,7 +151,7 @@ const menuItems = [
   {
     name: "Dashboard",
     icon: "<FaHome />",
-    route: "home",
+    route: "",
   },
   {
     name: "Status",

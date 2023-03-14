@@ -11,6 +11,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className="flex flex-col overflow-x-hidden">
       <SessionProvider>
+        <Header />
         <Suspense fallback={<>{/* <LoadingSpinner /> */}</>}>
           {children}
         </Suspense>
