@@ -15,7 +15,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { AiOutlineMenu } from "react-icons/ai";
-import { signOut, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 61,
@@ -143,7 +143,9 @@ const Header = ({ theme, setTheme }) => {
           </div>
         </div>
         <div
-          className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${!openMenu ? "top-[-400px]" : "top-0"} absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}
+          className={`w-5/6 md:flex justify-between items-center transition-all ease-in-out duration-500 md:top-5 ${
+            !openMenu ? "top-[-400px]" : "top-0"
+          } absolute z-10 md:ml-36 lg:ml-64 bg-accent md:bg-opacity-0 p-5 md:p-0`}
         >
           <div className="">
             <ul
@@ -156,7 +158,9 @@ const Header = ({ theme, setTheme }) => {
             <ul className="md:flex items-center justify-center md:flex-row-reverse text-base md:text-lg lg:text-xl text-primary dark:text-dark-base-100">
               <li className="md:px-2 lg:px-5 py-2">
                 {!data?.user ? (
-                  <Link onClick={() => setOpenMenu(!openMenu)} href="/login">
+                  <Link href='/login'
+                    onClick={() => setOpenMenu(!openMenu)}
+                  >
                     Login
                   </Link>
                 ) : (
@@ -183,10 +187,7 @@ const Header = ({ theme, setTheme }) => {
                       <div className="py-3 pl-3 pr-10">
                         <ul>
                           <li className="py-2">
-                            <Link
-                              href="/dashboard/users"
-                              onClick={handleClose}
-                            >
+                            <Link href="/dashboard/users" onClick={handleClose}>
                               Dashboard
                             </Link>
                           </li>

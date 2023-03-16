@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         <SessionProvider>
           <Header theme={theme} setTheme={setTheme} />
           <Suspense fallback={<>{/* <Loading /> */}</>}>{children}</Suspense>
-          {/* <Footer /> */}
+          <Footer />
           <Toaster />
         </SessionProvider>
       </body>
